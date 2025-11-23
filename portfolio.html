@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAIKI TSURU | SERVICE DESIGNER</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- 質感と基盤のスタイル --- */
+        :root {
+            --text-main: #111111;
+            --text-sub: #666666;
+            --line: #E5E5E5;
+            --bg: #FAFAFA;
+        }
+
+        body {
+            font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            /* 紙のような微細なノイズを加える */
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+            overflow-x: hidden;
+            cursor: default;
+        }
+
+        /* 選択範囲の色をカスタマイズ */
+        ::selection {
+            background: #111;
+            color: #fff;
+        }
+
+        /* --- タイポグラフィ --- */
+        .txt-hero {
+            font-size: clamp(3rem, 8vw, 10rem);
+            line-height: 0.9;
+            letter-spacing: -0.04em;
+            font-weight: 500;
+        }
+        .txt-label {
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--text-sub);
+        }
+        .txt-body {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            font-family: 'Noto Sans JP', sans-serif;
+            font-weight: 300;
+            color: #333;
+        }
+
+        /* --- ユーティリティ --- */
+        .border-line { border-color: var(--line); }
+        .h-screen-fix { min-height: 100vh; }
+        
+        /* --- 高度なアニメーション (Cubic Bezier) --- */
+        .reveal-wrap {
+            overflow: hidden;
+            position: relative;
+        }
+        .reveal-content {
+            transform: translateY(100%);
+            opacity: 0;
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 1.2s ease;
+        }
+        .reveal-content.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* 画像のパララックス用コンテナ */
+        .img-parallax {
+            transition: transform 0.5s ease-out;
+            will-change: transform;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="fixed inset-0 pointer-events-none z-0 flex justify-between px-6 lg:px-12 w-full h-full">
+        <div class="w-px h-full bg-gray-200 opacity-50"></div>
+        <div class="w-px h-full bg-gray-200 opacity-50 hidden md:block"></div>
+        <div class="w-px h-full bg-gray-200 opacity-50 hidden md:block"></div>
+        <div class="w-px h-full bg-gray-200 opacity-50"></div>
+    </div>
+
+    <header class="fixed top-0 w-full z-50 mix-blend-difference text-white px-6 lg:px-12 py-8 flex justify-between items-start">
+        <div class="text-xs font-bold tracking-widest">
+            DAIKI TSURU<br>
+            PORTFOLIO '25
+        </div>
+        <nav class="hidden md:flex flex-col text-right text-xs font-medium tracking-widest space-y-1">
+            <a href="#projects" class="hover:opacity-50 transition">PROJECTS</a>
+            <a href="#method" class="hover:opacity-50 transition">METHOD</a>
+            <a href="#about" class="hover:opacity-50 transition">ABOUT</a>
+        </nav>
+    </header>
+
+    <section class="relative z-10 w-full min-h-screen flex flex-col justify-end pb-12 lg:pb-24 px-6 lg:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4 w-full border-b border-gray-300 pb-8">
+            <div class="md:col-span-2 flex items-end">
+                <span class="txt-label block mb-2 reveal-wrap"><span class="reveal-content block">(SERVICE DESIGNER)</span></span>
+            </div>
+            
+            <div class="md:col-span-10 text-right">
+                <div class="reveal-wrap">
+                    <h1 class="txt-hero reveal-content block delay-100">TSURU</h1>
+                </div>
+                <div class="reveal-wrap">
+                    <h1 class="txt-hero reveal-content block delay-200 text-gray-400">DAIKI</h1>
+                </div>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4 pt-4">
+            <div class="md:col-span-6 md:col-start-7">
+                <p class="txt-body text-sm reveal-wrap">
+                    <span class="reveal-content block delay-500">
+                        Designing the logic of business growth.<br>
+                        事業のボトルネックを、ロジックとデザインで建築する。
+                    </span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative z-10 w-full py-24 px-6 lg:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-center">
+            <div class="reveal-wrap aspect-[3/4] bg-gray-100 relative overflow-hidden">
+                <img src="images/profile.jpg" alt="Profile" class="img-parallax reveal-content w-full h-full object-cover grayscale brightness-110 contrast-125">
+            </div>
+
+            <div>
+                <span class="txt-label mb-6 block">01 — PHILOSOPHY</span>
+                <h2 class="text-5xl lg:text-7xl font-light mb-8 tracking-tighter reveal-wrap">
+                    <span class="reveal-content block">ZERO TO</span>
+                    <span class="reveal-content block ml-12">ONE.</span>
+                </h2>
+                
+                <div class="space-y-8 border-l border-gray-200 pl-8">
+                    <div class="reveal-wrap">
+                        <h3 class="text-lg font-medium mb-2 reveal-content">顧客起点での価値創造</h3>
+                        <p class="txt-body text-xs text-gray-500 reveal-content">Customer Centric</p>
+                    </div>
+                    <div class="reveal-wrap">
+                        <h3 class="text-lg font-medium mb-2 reveal-content">推進力と巻き込み</h3>
+                        <p class="txt-body text-xs text-gray-500 reveal-content">Driving Force</p>
+                    </div>
+                    <div class="reveal-wrap">
+                        <h3 class="text-lg font-medium mb-2 reveal-content">デザイン思考による解決</h3>
+                        <p class="txt-body text-xs text-gray-500 reveal-content">Design Thinking</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="method" class="relative z-10 w-full py-24 border-t border-gray-200">
+        <div class="px-6 lg:px-12 mb-12 flex justify-between items-end">
+            <span class="txt-label">02 — METHODOLOGY</span>
+            <p class="text-right text-xs max-w-xs font-mono text-gray-500 hidden md:block">
+                Based on Double Diamond<br>& Funnel Analysis
+            </p>
+        </div>
+
+        <div class="w-full overflow-hidden px-6 lg:px-12">
+            <div class="bg-white border border-gray-200 p-8 md:p-16 reveal-wrap">
+                <div class="reveal-content grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-4">
+                        <h3 class="text-3xl font-light mb-6">思考の構造化</h3>
+                        <p class="txt-body mb-6">
+                            問題の「真の原因」を特定するため、ファネル分析とデザイン思考の拡散・収束プロセスを統合。
+                        </p>
+                        <ul class="list-none space-y-2 text-xs font-mono text-gray-500">
+                            <li>+ Discover (発見)</li>
+                            <li>+ Define (定義)</li>
+                            <li>+ Develop (展開)</li>
+                            <li>+ Deliver (提供)</li>
+                        </ul>
+                    </div>
+                    <div class="lg:col-span-8">
+                        <div class="relative w-full">
+                            <img src="images/framework.png" alt="Framework" class="w-full h-auto opacity-90 mix-blend-multiply">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="relative z-10 w-full py-24 px-6 lg:px-12 bg-[#111] text-white">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-16">
+            <div class="md:col-span-4">
+                <span class="txt-label text-gray-500">03 — SELECTED WORKS</span>
+            </div>
+            <div class="md:col-span-8">
+                <h2 class="text-4xl font-light">FEATURED CASE STUDY</h2>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800">
+            <div class="group py-12 border-b border-gray-800 transition-colors hover:bg-gray-900 cursor-pointer">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-baseline">
+                    <div class="md:col-span-1 text-xs text-gray-500 font-mono">01</div>
+                    <div class="md:col-span-5">
+                        <h3 class="text-2xl font-medium mb-2">みんなの銀行<br>ローン獲得PDCA</h3>
+                        <p class="text-xs text-gray-500 font-mono mt-2">MARKETING / UIUX / DATA ANALYSIS</p>
+                    </div>
+                    <div class="md:col-span-4 text-sm font-light text-gray-400">
+                        属人的な改善プロセスをKTLにより体系化。<br>定量データとクリエイティブを接続。
+                    </div>
+                    <div class="md:col-span-2 text-right">
+                        <span class="text-3xl font-light text-white">120%</span>
+                        <p class="text-[10px] text-gray-500 uppercase">CPA Improvement</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </section>
+
+    <section id="about" class="relative z-10 w-full py-24 px-6 lg:px-12">
+        <span class="txt-label mb-12 block">04 — HISTORY</span>
+        
+        <div class="w-full border-t border-gray-200">
+            <div class="grid grid-cols-12 py-6 border-b border-gray-200 hover:bg-gray-50 transition reveal-wrap items-center">
+                <div class="col-span-3 md:col-span-2 text-xs font-mono text-gray-500 reveal-content">2023 - NOW</div>
+                <div class="col-span-9 md:col-span-4 font-medium reveal-content">MINNA NO BANK</div>
+                <div class="col-span-12 md:col-span-6 text-sm text-gray-600 mt-2 md:mt-0 reveal-content">Service Designer / 提供価値策定・PDCA体系化</div>
+            </div>
+            <div class="grid grid-cols-12 py-6 border-b border-gray-200 hover:bg-gray-50 transition reveal-wrap items-center">
+                <div class="col-span-3 md:col-span-2 text-xs font-mono text-gray-500 reveal-content">2022 - 2023</div>
+                <div class="col-span-9 md:col-span-4 font-medium reveal-content">MINNA NO BANK</div>
+                <div class="col-span-12 md:col-span-6 text-sm text-gray-600 mt-2 md:mt-0 reveal-content">Product Designer / UX Research</div>
+            </div>
+            <div class="grid grid-cols-12 py-6 border-b border-gray-200 hover:bg-gray-50 transition reveal-wrap items-center">
+                <div class="col-span-3 md:col-span-2 text-xs font-mono text-gray-500 reveal-content">2020 - 2022</div>
+                <div class="col-span-9 md:col-span-4 font-medium reveal-content">ZDF</div>
+                <div class="col-span-12 md:col-span-6 text-sm text-gray-600 mt-2 md:mt-0 reveal-content">Frontend Engineer / UI Design</div>
+            </div>
+            <div class="grid grid-cols-12 py-6 border-b border-gray-200 hover:bg-gray-50 transition reveal-wrap items-center">
+                <div class="col-span-3 md:col-span-2 text-xs font-mono text-gray-500 reveal-content">2017 - 2020</div>
+                <div class="col-span-9 md:col-span-4 font-medium reveal-content">FUKUOKA BANK</div>
+                <div class="col-span-12 md:col-span-6 text-sm text-gray-600 mt-2 md:mt-0 reveal-content">Sales / 営業成績150%達成</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="relative z-10 w-full py-12 px-6 lg:px-12 flex justify-between items-end">
+        <div>
+            <p class="text-[10px] text-gray-400 uppercase tracking-widest">
+                © 2025 DAIKI TSURU<br>
+                ALL RIGHTS RESERVED.
+            </p>
+        </div>
+        <div class="text-right">
+            <a href="mailto:email@example.com" class="text-lg font-medium hover:underline decoration-1 underline-offset-4">Get in touch</a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = entry.target.querySelector('.reveal-content');
+                        if (target) {
+                            target.classList.add('active');
+                        }
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const revealWraps = document.querySelectorAll('.reveal-wrap');
+            revealWraps.forEach(wrap => {
+                observer.observe(wrap);
+            });
+
+            // パララックス効果（画像）
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const parallaxImages = document.querySelectorAll('.img-parallax');
+                parallaxImages.forEach(img => {
+                    const speed = 0.05;
+                    img.style.transform = `translateY(${scrolled * speed}px)`;
+                });
+            });
+
+            // スムーズスクロール
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
