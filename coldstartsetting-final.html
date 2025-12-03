@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Onboarding (Minimalist)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #111827;
+        }
+        .slide-canvas {
+            width: 1280px;
+            height: 720px;
+            background-color: #ffffff;
+            position: relative;
+            padding: 80px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        /* Minimalist Accent: Slate (Ethics & Professionalism) */
+        .accent-color { color: #475569; } 
+        .accent-bg { background-color: #475569; }
+        
+        .grid-line {
+            border-top: 1px solid #e5e7eb;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slide-canvas">
+        
+        <div>
+            <div class="flex justify-between items-start mb-6">
+                <div class="text-xs font-bold tracking-[0.2em] text-gray-400 uppercase">Project: UX Ethics & Onboarding Redesign</div>
+                <div class="text-xs font-medium text-gray-400">UX Architect / Product Strategy</div>
+            </div>
+
+            <div class="flex justify-between items-end">
+                <h1 class="text-5xl font-bold leading-tight tracking-tight text-gray-900 w-2/3">
+                    ダークパターンを阻止せよ。<br>
+                    信頼を守る<span class="accent-color">倫理的なUX</span>への転換。
+                </h1>
+                
+                <div class="text-right">
+                    <div class="flex flex-col items-end">
+                        <span class="text-sm font-bold text-gray-400 mb-1 tracking-wider">UX STANDARD</span>
+                        <span class="text-4xl font-bold text-gray-800 tracking-tight">Trust Protection</span>
+                        <div class="flex items-center gap-2 mt-1">
+                            <span class="text-lg font-bold accent-color">90% Implemented</span>
+                            <span class="text-xs text-gray-400">(Currently Redesigning)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-12 w-full mt-12 pt-8 border-t border-gray-200">
+            
+            <div class="group">
+                <div class="text-xs font-bold text-gray-300 mb-4 group-hover:text-gray-900 transition-colors">01 / ETHICS</div>
+                <h3 class="text-xl font-bold mb-3">LTV損失リスクの回避</h3>
+                <p class="text-sm text-gray-600 leading-7 mb-4">
+                    契約率狙いの「デフォルト同意」案に対し、中長期の信頼を損なうダークパターンとして是正を提案。<br>
+                    頭取と対話し、課題を「無理強い」から「機会損失の解消」へ再定義。
+                </p>
+                <div class="text-xs font-mono text-gray-400 bg-gray-50 inline-block px-2 py-1 rounded">Output: 方針転換の合意形成</div>
+            </div>
+
+            <div class="group">
+                <div class="text-xs font-bold text-gray-300 mb-4 group-hover:text-gray-900 transition-colors">02 / CONCEPT</div>
+                <h3 class="text-xl font-bold mb-3">コールドスタート問題の解消</h3>
+                <p class="text-sm text-gray-600 leading-7 mb-4">
+                    ユーザーが機能を知らない状態（コールドスタート）を解くため、アンケート型の初期設定フローを考案。<br>
+                    銀行用語を「便益」に翻訳し、必要な機能だけを案内する体験へ。
+                </p>
+                <div class="text-xs font-mono text-gray-400 bg-gray-50 inline-block px-2 py-1 rounded">Output: 初期セッティングフロー図</div>
+            </div>
+
+            <div class="group">
+                <div class="text-xs font-bold text-gray-300 mb-4 group-hover:text-gray-900 transition-colors">03 / DECISION</div>
+                <h3 class="text-xl font-bold mb-3">正しさの実装と戦略的判断</h3>
+                <p class="text-sm text-gray-600 leading-7 mb-4">
+                    倫理的な正しさとビジネス要件を両立させ、9割の実装まで到達。<br>
+                    現在はプロダクト環境の変化に合わせ、より最適な形へ昇華させるための再設計フェーズへ移行。
+                </p>
+                <div class="text-xs font-mono text-gray-400 bg-gray-50 inline-block px-2 py-1 rounded">Output: 実装済みコード (Unreleased)</div>
+            </div>
+
+        </div>
+
+        <div class="border-t border-gray-200 pt-6 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <div class="w-2 h-2 accent-bg rounded-full"></div>
+                <span class="text-xs font-bold tracking-widest text-gray-400 uppercase">My Core Value</span>
+            </div>
+            <p class="text-sm font-medium text-gray-600">
+                目先の数字を追う「ダークパターン」を阻止し、LTV（信頼）を守るゲートキーパー。経営の真意を読み解き、本質解へ導く。
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>

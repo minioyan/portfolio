@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Loan Project (Minimalist)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #111827;
+        }
+        .slide-canvas {
+            width: 1280px;
+            height: 720px;
+            background-color: #ffffff;
+            position: relative;
+            padding: 80px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        /* Minimalist Accent: Royal Blue (Data & Trust) */
+        .accent-color { color: #2563eb; } 
+        .accent-bg { background-color: #2563eb; }
+        
+        .grid-line {
+            border-top: 1px solid #e5e7eb;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slide-canvas">
+        
+        <div>
+            <div class="flex justify-between items-start mb-6">
+                <div class="text-xs font-bold tracking-[0.2em] text-gray-400 uppercase">Project: Growth Marketing & Ops</div>
+                <div class="text-xs font-medium text-gray-400">BizOps / Org Design</div>
+            </div>
+
+            <div class="flex justify-between items-end">
+                <h1 class="text-5xl font-bold leading-tight tracking-tight text-gray-900 w-2/3">
+                    「感覚の空中戦」を終わらせる。<br>
+                    <span class="accent-color">Fact</span>で率いるCPA改善。
+                </h1>
+                
+                <div class="text-right">
+                    <div class="flex items-baseline justify-end gap-1">
+                        <span class="text-sm font-bold text-gray-400 mr-2">CPA IMPORVEMENT</span>
+                        <span class="text-6xl font-bold accent-color tracking-tighter">120</span>
+                        <span class="text-lg font-medium text-gray-600">%</span>
+                    </div>
+                    <p class="text-xs text-gray-400 mt-1">獲得数 1.2倍 (YoY) / 運用効率化</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-12 w-full mt-12 pt-8 border-t border-gray-200">
+            
+            <div class="group">
+                <div class="text-xs font-bold text-gray-300 mb-4 group-hover:text-gray-900 transition-colors">01 / FACT & LOGIC</div>
+                <h3 class="text-xl font-bold mb-3">ブラックボックスの解体</h3>
+                <p class="text-sm text-gray-600 leading-7 mb-4">
+                    全クリエイティブを「訴求軸×表現」に分解し、実績と紐付け。<br>
+                    「秘伝のタレ」化していた運用を整理し、感覚的な議論をファクトベースへ強制移行。
+                </p>
+                <div class="text-xs font-mono text-gray-400 bg-gray-50 inline-block px-2 py-1 rounded">Output: 分析マトリクス</div>
+            </div>
+
+            <div class="group">
+                <div class="text-xs font-bold text-gray-300 mb-4 group-hover:text-gray-900 transition-colors">02 / STRATEGY</div>
+                <h3 class="text-xl font-bold mb-3">実績を梃子にした権限移譲</h3>
+                <p class="text-sm text-gray-600 leading-7 mb-4">
+                    いきなり全権を求めず、バナー1枚の「小さな成功 (Quick Win)」から着手。<br>
+                    信頼を積み上げ、最終的にLP制作や会議ファシリテーションの主導権を獲得。
+                </p>
+                <div class="text-xs font-mono text-gray-400 bg-gray-50 inline-block px-2 py-1 rounded">Output: 改善ロードマップ</div>
+            </div>
+
+            <div class="group">
+                <div class="text-xs font-bold text-gray-300 mb-4 group-hover:text-gray-900 transition-colors">03 / EXECUTION</div>
+                <h3 class="text-xl font-bold mb-3">AIによる攻守の効率化</h3>
+                <p class="text-sm text-gray-600 leading-7 mb-4">
+                    「隔週スプリント」でPDCAを高速化。<br>
+                    さらに銀行業法を学習させたAIによるリーガルチェック自動化を導入し、運用コストを削減しつつ品質を担保。
+                </p>
+                <div class="text-xs font-mono text-gray-400 bg-gray-50 inline-block px-2 py-1 rounded">Output: AI活用運用フロー</div>
+            </div>
+
+        </div>
+
+        <div class="border-t border-gray-200 pt-6 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <div class="w-2 h-2 accent-bg rounded-full"></div>
+                <span class="text-xs font-bold tracking-widest text-gray-400 uppercase">My Core Value</span>
+            </div>
+            <p class="text-sm font-medium text-gray-600">
+                データによる「課題特定」と、AI活用による「仕組み化」で、現場の混乱を収拾し事業KPIを必達する。
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>

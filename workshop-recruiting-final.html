@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Hiring Experience (Minimalist)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #111827;
+        }
+        .slide-canvas {
+            width: 1280px;
+            height: 720px;
+            background-color: #ffffff;
+            position: relative;
+            padding: 80px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        /* Minimalist Accent: International Orange / Burnt Amber */
+        .accent-color { color: #ea580c; } 
+        .accent-bg { background-color: #ea580c; }
+        
+        /* Grid lines for Swiss style */
+        .grid-line {
+            border-top: 1px solid #e5e7eb;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slide-canvas">
+        
+        <div>
+            <div class="flex justify-between items-start mb-6">
+                <div class="text-xs font-bold tracking-[0.2em] text-gray-400 uppercase">Project: Hiring Experience Redesign</div>
+                <div class="text-xs font-medium text-gray-400">2024 New Graduate Hiring</div>
+            </div>
+
+            <div class="flex justify-between items-end">
+                <h1 class="text-5xl font-bold leading-tight tracking-tight text-gray-900 w-2/3">
+                    「お客様扱い」をやめる。<br>
+                    採用を<span class="accent-color">UXデザイン</span>へ。
+                </h1>
+                
+                <div class="text-right">
+                    <div class="flex items-baseline justify-end gap-1">
+                        <span class="text-sm font-bold text-gray-400 mr-2">RESULT</span>
+                        <span class="text-6xl font-bold accent-color tracking-tighter">1st</span>
+                        <span class="text-lg font-medium text-gray-600">Round Finish</span>
+                    </div>
+                    <p class="text-xs text-gray-400 mt-1">初の1次募集での採用充足 / 優秀層承諾率 大幅増</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-12 w-full mt-12 pt-8 border-t border-gray-200">
+            
+            <div class="group">
+                <div class="text-xs font-bold text-gray-300 mb-4 group-hover:text-gray-900 transition-colors">01 / CONCEPT</div>
+                <h3 class="text-xl font-bold mb-3">脱・お客様扱い</h3>
+                <p class="text-sm text-gray-600 leading-7 mb-4">
+                    優秀層が求めているのは「接待」ではなく、ヒリヒリするような「現場のリアリティ」。<br>
+                    獲得から継続までを一気通貫で設計し、ビジネスの解像度を問う構成へ。
+                </p>
+                <div class="text-xs font-mono text-gray-400 bg-gray-50 inline-block px-2 py-1 rounded">Output: ワークショップ設計図</div>
+            </div>
+
+            <div class="group">
+                <div class="text-xs font-bold text-gray-300 mb-4 group-hover:text-gray-900 transition-colors">02 / TECHNOLOGY</div>
+                <h3 class="text-xl font-bold mb-3">生成AI × Real Data</h3>
+                <p class="text-sm text-gray-600 leading-7 mb-4">
+                    実際の顧客インタビューをAIに学習させ、本質的課題を含む「ダミーログ」を生成。<br>
+                    機密情報を守りつつ、現場と全く同じ不確実性と複雑さを体験させる。
+                </p>
+                <div class="text-xs font-mono text-gray-400 bg-gray-50 inline-block px-2 py-1 rounded">Output: 課題生成プロンプト</div>
+            </div>
+
+            <div class="group">
+                <div class="text-xs font-bold text-gray-300 mb-4 group-hover:text-gray-900 transition-colors">03 / FEEDBACK</div>
+                <h3 class="text-xl font-bold mb-3">2 Good / 2 Bad</h3>
+                <p class="text-sm text-gray-600 leading-7 mb-4">
+                    人事だけでなく、現場のエース社員をメンターに招聘。<br>
+                    「良い点2つ・改善点2つ」を必ず伝えるルールで、耳の痛い本気のフィードバックを提供。
+                </p>
+                <div class="text-xs font-mono text-gray-400 bg-gray-50 inline-block px-2 py-1 rounded">Output: メンターFBガイドライン</div>
+            </div>
+
+        </div>
+
+        <div class="border-t border-gray-200 pt-6 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <div class="w-2 h-2 accent-bg rounded-full"></div>
+                <span class="text-xs font-bold tracking-widest text-gray-400 uppercase">My Core Value</span>
+            </div>
+            <p class="text-sm font-medium text-gray-600">
+                難易度の高い課題設計と本気の対話で、企業の「採用力」と候補者の「志望度」を最大化する。
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>

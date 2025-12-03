@@ -4,9 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DAIKI TSURU | SERVICE DESIGNER</title>
-    <meta name="description" content="Portfolio of Daiki Tsuru, a Service Designer based in Fukuoka. Strategic Design & Business Logic.">
     
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'p-teal': '#0d9488',
+                        'p-blue': '#2563eb',
+                        'p-rose': '#e11d48',
+                        'p-cyan': '#0891b2',
+                        'p-amber': '#d97706',
+                        'p-indigo': '#4f46e5',
+                        'p-orange': '#ea580c',
+                    }
+                }
+            }
+        }
+    </script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +38,7 @@
         html { scroll-padding-top: 100px; }
 
         body {
-            font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
+            font-family: 'Noto Sans JP', 'Montserrat', sans-serif;
             background-color: var(--bg);
             color: var(--text-main);
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
@@ -48,12 +64,14 @@
         }
 
         .txt-hero {
+            font-family: 'Montserrat', sans-serif;
             font-size: clamp(3.2rem, 11vw, 11rem); 
             line-height: 0.9;
             letter-spacing: -0.04em;
             font-weight: 500;
         }
         .txt-label {
+            font-family: 'Montserrat', sans-serif;
             font-size: 0.7rem;
             letter-spacing: 0.15em;
             text-transform: uppercase;
@@ -63,7 +81,6 @@
         .txt-body {
             font-size: 0.95rem;
             line-height: 1.8;
-            font-family: 'Noto Sans JP', sans-serif;
             font-weight: 400;
             color: #333;
         }
@@ -86,12 +103,12 @@
         }
         .hover-underline:hover::after { transform: scaleX(1); transform-origin: bottom left; }
 
-        /* Modal */
-        #image-modal { transition: opacity 0.3s ease, visibility 0.3s ease; }
-        #image-modal.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
-        #image-modal:not(.hidden) { opacity: 1; visibility: visible; pointer-events: auto; }
-        #modal-content { transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); transform: scale(0.95); }
-        #image-modal:not(.hidden) #modal-content { transform: scale(1); }
+        /* Modal Styles */
+        #html-modal { transition: opacity 0.3s ease, visibility 0.3s ease; }
+        #html-modal.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+        #html-modal:not(.hidden) { opacity: 1; visibility: visible; pointer-events: auto; }
+        #modal-wrapper { transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); transform: scale(0.95); }
+        #html-modal:not(.hidden) #modal-wrapper { transform: scale(1); }
     </style>
 </head>
 <body class="antialiased text-[#111]">
@@ -135,7 +152,7 @@
                     <p class="txt-body text-sm reveal-wrap">
                         <span class="reveal-content block delay-300">
                             Designing the logic of business growth.<br>
-                            事業のボトルネックを、<span class="border-b border-gray-400 pb-0.5">ロジックとデザイン</span>で建築する。
+                            事業のボトルネックを、<span class="border-b border-gray-400 pb-0.5">ロジックとデザイン</span>で解決する。
                         </span>
                     </p>
                 </div>
@@ -155,15 +172,15 @@
                     </h2>
                     <div class="space-y-8 lg:space-y-10 border-l border-gray-200 pl-6 lg:pl-10">
                         <div class="reveal-wrap group">
-                            <h3 class="text-lg lg:text-xl font-medium mb-1 reveal-content">顧客起点での価値創造</h3>
+                            <h3 class="text-lg lg:text-xl font-medium mb-1 reveal-content">顧客起点で価値をつくる</h3>
                             <p class="txt-label text-gray-400 reveal-content">Customer Centric</p>
                         </div>
                         <div class="reveal-wrap group">
-                            <h3 class="text-lg lg:text-xl font-medium mb-1 reveal-content">推進力と巻き込み</h3>
+                            <h3 class="text-lg lg:text-xl font-medium mb-1 reveal-content">周りを巻き込む推進力</h3>
                             <p class="txt-label text-gray-400 reveal-content">Driving Force</p>
                         </div>
                         <div class="reveal-wrap group">
-                            <h3 class="text-lg lg:text-xl font-medium mb-1 reveal-content">デザイン思考による解決</h3>
+                            <h3 class="text-lg lg:text-xl font-medium mb-1 reveal-content">仕組みで課題を解決する</h3>
                             <p class="txt-label text-gray-400 reveal-content">System Thinking</p>
                         </div>
                     </div>
@@ -175,7 +192,7 @@
             <div class="px-6 lg:px-12 mb-8 lg:mb-12 flex justify-between items-end">
                 <span class="txt-label">02 — METHODOLOGY</span>
                 <p class="text-right text-[10px] font-mono-custom text-gray-400 hidden md:block leading-relaxed">
-                    Strategic Process:<br>Identify Leverage Point & Solve Root Cause
+                    Process:<br>Find the bottleneck & Fix it.
                 </p>
             </div>
 
@@ -192,7 +209,7 @@
                                 <rect width="850" height="400" fill="url(#grid-dots)" />
                                 <g transform="translate(50, 50)">
                                     <text x="75" y="-20" font-family="'Montserrat', sans-serif" font-size="10" font-weight="600" letter-spacing="0.1em" fill="#111" text-anchor="middle">1. STRATEGIC SELECTION</text>
-                                    <text x="75" y="0" font-family="'Noto Sans JP', sans-serif" font-size="9" fill="#666" text-anchor="middle">ファネル分析で「急所」を特定</text>
+                                    <text x="75" y="0" font-family="'Noto Sans JP', sans-serif" font-size="11" fill="#666" text-anchor="middle">解くべき「問い」を見つける</text>
                                     <path d="M0,40 L150,40 L130,240 L20,240 Z" stroke="#E5E5E5" stroke-width="0.8" fill="white"/>
                                     <line x1="8" y1="90" x2="142" y2="90" stroke="#E5E5E5" stroke-width="0.8"/>
                                     <line x1="15" y1="140" x2="135" y2="140" stroke="#E5E5E5" stroke-width="0.8"/>
@@ -200,11 +217,11 @@
                                     <g>
                                         <path d="M15,140 L135,140 L127,190 L23,190 Z" fill="url(#hatch)" stroke="#111" stroke-width="1"/>
                                         <rect x="25" y="160" width="100" height="12" fill="#111"/>
-                                        <text x="75" y="169" font-family="'Montserrat', sans-serif" font-size="9" font-weight="600" fill="white" text-anchor="middle" letter-spacing="0.05em">LEVERAGE POINT</text>
+                                        <text x="75" y="169" font-family="'Noto Sans JP', sans-serif" font-size="10" font-weight="700" fill="white" text-anchor="middle" letter-spacing="0.05em">一番効く急所</text>
                                     </g>
-                                    <text x="75" y="70" font-family="'Montserrat', sans-serif" font-size="8" fill="#999" text-anchor="middle">Awareness</text>
-                                    <text x="75" y="120" font-family="'Montserrat', sans-serif" font-size="8" fill="#999" text-anchor="middle">Consideration</text>
-                                    <text x="75" y="220" font-family="'Montserrat', sans-serif" font-size="8" fill="#999" text-anchor="middle">Conversion</text>
+                                    <text x="75" y="70" font-family="'Noto Sans JP', sans-serif" font-size="9" fill="#999" text-anchor="middle">知ってもらう</text>
+                                    <text x="75" y="120" font-family="'Noto Sans JP', sans-serif" font-size="9" fill="#999" text-anchor="middle">比べられる</text>
+                                    <text x="75" y="220" font-family="'Noto Sans JP', sans-serif" font-size="9" fill="#999" text-anchor="middle">選ばれる</text>
                                 </g>
                                 <g transform="translate(275, 170)">
                                     <line x1="-30" y1="0" x2="30" y2="0" stroke="#111" stroke-width="1" marker-end="url(#arrow-pc)" />
@@ -212,21 +229,21 @@
                                 </g>
                                 <g transform="translate(350, 50)">
                                     <text x="225" y="-20" font-family="'Montserrat', sans-serif" font-size="10" font-weight="600" letter-spacing="0.1em" fill="#111" text-anchor="middle">2. ESSENTIAL SOLUTION</text>
-                                    <text x="225" y="0" font-family="'Noto Sans JP', sans-serif" font-size="9" fill="#666" text-anchor="middle">デザイン思考による「真因」の特定と解決</text>
+                                    <text x="225" y="0" font-family="'Noto Sans JP', sans-serif" font-size="11" fill="#666" text-anchor="middle">デザイン思考で「本質」を解く</text>
                                     <line x1="0" y1="140" x2="450" y2="140" stroke="#E5E5E5" stroke-width="0.8" stroke-dasharray="4 4" />
                                     <g stroke="#111" stroke-width="1" stroke-linejoin="miter" fill="none">
                                         <path d="M0,140 L112.5,60 L225,140 L112.5,220 Z" />
                                         <path d="M225,140 L337.5,60 L450,140 L337.5,220 Z" />
                                     </g>
-                                    <g font-family="'Montserrat', sans-serif" font-size="9" font-weight="600" text-anchor="middle" fill="#111" letter-spacing="0.05em">
-                                        <text x="112.5" y="50">ROOT CAUSE</text>
-                                        <text x="337.5" y="50">OPTIMAL SOLUTION</text>
+                                    <g font-family="'Noto Sans JP', sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#111" letter-spacing="0.05em">
+                                        <text x="112.5" y="50">真の原因</text>
+                                        <text x="337.5" y="50">あるべき解決策</text>
                                     </g>
-                                    <g font-family="'Noto Sans JP', sans-serif" font-size="8" font-weight="300" text-anchor="middle" fill="#666">
-                                        <text x="56.25" y="143">事象の発散</text>
-                                        <text x="168.75" y="143" font-weight="500" fill="#111">真因の特定</text>
-                                        <text x="281.25" y="143">解決策の模索</text>
-                                        <text x="393.75" y="143" font-weight="500" fill="#111">価値の具現化</text>
+                                    <g font-family="'Noto Sans JP', sans-serif" font-size="9" font-weight="300" text-anchor="middle" fill="#666">
+                                        <text x="56.25" y="143">洗い出し</text>
+                                        <text x="168.75" y="143" font-weight="500" fill="#111">課題の特定</text>
+                                        <text x="281.25" y="143">アイデア</text>
+                                        <text x="393.75" y="143" font-weight="500" fill="#111">形にする</text>
                                     </g>
                                     <circle cx="225" cy="140" r="3" fill="#111" />
                                     <circle cx="450" cy="140" r="3" fill="#111" />
@@ -243,7 +260,7 @@
                                 </defs>
                                 <g transform="translate(170, 20)">
                                     <text x="0" y="0" font-family="'Montserrat', sans-serif" font-size="15" font-weight="700" letter-spacing="0.05em" fill="#111" text-anchor="middle">1. STRATEGIC SELECTION</text>
-                                    <text x="0" y="20" font-family="'Noto Sans JP', sans-serif" font-size="11" fill="#666" text-anchor="middle">ファネル分析で「急所」を特定</text>
+                                    <text x="0" y="20" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#666" text-anchor="middle">解くべき「問い」を見つける</text>
                                     <g transform="translate(-100, 45)">
                                         <path d="M0,0 L200,0 L180,150 L20,150 Z" stroke="#E5E5E5" stroke-width="1" fill="white"/>
                                         <line x1="10" y1="37" x2="190" y2="37" stroke="#E5E5E5"/>
@@ -251,10 +268,10 @@
                                         <line x1="25" y1="112" x2="175" y2="112" stroke="#E5E5E5"/>
                                         <path d="M18,75 L182,75 L175,112 L25,112 Z" fill="url(#hatch-sm)" stroke="#111" stroke-width="1.5"/>
                                         <rect x="50" y="85" width="100" height="18" fill="#111"/>
-                                        <text x="100" y="98" font-family="'Montserrat', sans-serif" font-size="11" font-weight="700" fill="white" text-anchor="middle">LEVERAGE POINT</text>
-                                        <text x="100" y="25" font-family="'Montserrat', sans-serif" font-size="10" fill="#999" text-anchor="middle">Awareness</text>
-                                        <text x="100" y="65" font-family="'Montserrat', sans-serif" font-size="10" fill="#999" text-anchor="middle">Consideration</text>
-                                        <text x="100" y="140" font-family="'Montserrat', sans-serif" font-size="10" fill="#999" text-anchor="middle">Conversion</text>
+                                        <text x="100" y="98" font-family="'Noto Sans JP', sans-serif" font-size="12" font-weight="700" fill="white" text-anchor="middle">一番効く急所</text>
+                                        <text x="100" y="25" font-family="'Noto Sans JP', sans-serif" font-size="11" fill="#999" text-anchor="middle">知ってもらう</text>
+                                        <text x="100" y="65" font-family="'Noto Sans JP', sans-serif" font-size="11" fill="#999" text-anchor="middle">比べられる</text>
+                                        <text x="100" y="140" font-family="'Noto Sans JP', sans-serif" font-size="11" fill="#999" text-anchor="middle">選ばれる</text>
                                     </g>
                                 </g>
                                 <g transform="translate(170, 230)">
@@ -264,7 +281,7 @@
                                 </g>
                                 <g transform="translate(170, 310)">
                                     <text x="0" y="0" font-family="'Montserrat', sans-serif" font-size="15" font-weight="700" letter-spacing="0.05em" fill="#111" text-anchor="middle">2. ESSENTIAL SOLUTION</text>
-                                    <text x="0" y="20" font-family="'Noto Sans JP', sans-serif" font-size="11" fill="#666" text-anchor="middle">デザイン思考で「本質」を解決</text>
+                                    <text x="0" y="20" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#666" text-anchor="middle">デザイン思考で「本質」を解く</text>
                                     <g transform="translate(0, 60)">
                                         <g stroke="#111" stroke-width="1.5" stroke-linejoin="round" fill="none">
                                             <path d="M-150,80 L-75,0 L0,80 L-75,160 Z" />
@@ -272,10 +289,10 @@
                                         </g>
                                         <circle cx="0" cy="80" r="5" fill="#111" />
                                         <circle cx="150" cy="80" r="5" fill="#111" />
-                                        <text x="-75" y="-15" font-family="'Montserrat', sans-serif" font-size="10" font-weight="700" fill="#111" text-anchor="middle">ROOT CAUSE</text>
-                                        <text x="75" y="-15" font-family="'Montserrat', sans-serif" font-size="10" font-weight="700" fill="#111" text-anchor="middle">OPTIMAL SOLUTION</text>
-                                        <text x="-75" y="85" font-family="'Noto Sans JP', sans-serif" font-size="11" font-weight="500" fill="#111" text-anchor="middle">真因の特定</text>
-                                        <text x="75" y="85" font-family="'Noto Sans JP', sans-serif" font-size="11" font-weight="500" fill="#111" text-anchor="middle">価値の具現化</text>
+                                        <text x="-75" y="-15" font-family="'Noto Sans JP', sans-serif" font-size="12" font-weight="700" fill="#111" text-anchor="middle">真の原因</text>
+                                        <text x="75" y="-15" font-family="'Noto Sans JP', sans-serif" font-size="12" font-weight="700" fill="#111" text-anchor="middle">解決策</text>
+                                        <text x="-75" y="85" font-family="'Noto Sans JP', sans-serif" font-size="11" font-weight="500" fill="#111" text-anchor="middle">原因の特定</text>
+                                        <text x="75" y="85" font-family="'Noto Sans JP', sans-serif" font-size="11" font-weight="500" fill="#111" text-anchor="middle">形にする</text>
                                     </g>
                                 </g>
                             </svg>
@@ -284,11 +301,11 @@
                 </div>
                 
                 <div class="mt-10 lg:mt-12 max-w-3xl reveal-wrap grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-8">
-                    <div class="md:col-span-4"><h3 class="text-lg font-medium mb-4 leading-tight">Strategy<br>& Execution Flow</h3></div>
+                    <div class="md:col-span-4"><h3 class="text-lg font-medium mb-4 leading-tight">戦略と実行の流れ</h3></div>
                     <div class="md:col-span-8">
                         <p class="txt-body text-sm reveal-content">
-                            ビジネスにおけるリソースは有限です。そのため、直感や経験則だけに頼るのではなく、まず<strong>定量的なファネル分析を用いて俯瞰し、最小の工数で最大の事業インパクト（ROI）が見込める「レバレッジポイント」</strong>を特定します。<br><br>
-                            方向性を定めた上で、その領域に集中的に<strong>デザイン思考（ダブルダイヤモンド）</strong>を適用。表層的な事象に惑わされず、<strong>「なぜその問題が起きているのか」という本質的な課題（真因）</strong>の解明から、実効性の高いソリューションの設計までを一気通貫で実行します。
+                            時間も予算も有限です。だからこそ、勘や経験だけに頼らず、まずはデータを俯瞰して<strong>「一番効く急所（ボトルネック）」</strong>を見つけ出します。<br><br>
+                            攻める場所が決まったら、そこにデザインの力を集中させます。表面的な現象に惑わされず、<strong>「なぜその問題が起きているのか（本当の原因）」</strong>を突き止め、解決策を形にして届けるところまでを一貫して行います。
                         </p>
                     </div>
                 </div>
@@ -310,99 +327,90 @@
                         <div></div>
                         <div class="bg-gray-50 rounded py-2 border border-gray-100">
                             <span class="block font-family-montserrat text-[10px] font-bold tracking-widest text-gray-500 uppercase">Strategy</span>
-                            <span class="block text-[9px] text-gray-400 font-light mt-0.5">0→1 構想・定義</span>
+                            <span class="block text-[9px] text-gray-400 font-light mt-0.5">構想・定義</span>
                         </div>
                         <div class="bg-gray-50 rounded py-2 border border-gray-100">
                             <span class="block font-family-montserrat text-[10px] font-bold tracking-widest text-gray-500 uppercase">Execution</span>
-                            <span class="block text-[9px] text-gray-400 font-light mt-0.5">1→10 実行・改善</span>
+                            <span class="block text-[9px] text-gray-400 font-light mt-0.5">実行・改善</span>
                         </div>
                         <div class="bg-gray-50 rounded py-2 border border-gray-100">
                             <span class="block font-family-montserrat text-[10px] font-bold tracking-widest text-gray-500 uppercase">Systemization</span>
-                            <span class="block text-[9px] text-gray-400 font-light mt-0.5">10→100 仕組み・資産</span>
+                            <span class="block text-[9px] text-gray-400 font-light mt-0.5">仕組み・資産</span>
                         </div>
                     </div>
 
                     <div class="grid grid-cols-[120px_1fr_1fr_1fr] gap-4 mb-4">
-                        <div class="bg-gray-50 rounded p-4 border border-gray-100 flex flex-col justify-center border-l-4 border-l-blue-500">
-                            <span class="font-family-montserrat text-[10px] font-bold tracking-widest text-blue-900 uppercase leading-tight">Business<br>Growth</span>
+                        <div class="bg-gray-50 rounded p-4 border border-gray-100 flex flex-col justify-center border-l-4 border-l-gray-300">
+                            <span class="font-family-montserrat text-[10px] font-bold tracking-widest text-gray-700 uppercase leading-tight">Business<br>Growth</span>
                             <span class="text-[9px] text-gray-400 mt-1">事業数値・PL</span>
                         </div>
-                        
                         <div class="border border-dashed border-gray-200 rounded bg-white flex items-center justify-center relative p-2">
-                            <span class="absolute bottom-1 right-2 text-[9px] font-bold text-gray-300 uppercase tracking-widest">Planning</span>
+                            <span class="absolute bottom-1 right-2 text-[9px] font-bold text-gray-200 uppercase tracking-widest">Planning</span>
                         </div>
-
-                        <div class="border border-gray-100 rounded bg-white p-2 flex flex-col gap-2">
-                            <a href="#case-02" class="group block border-l-2 border-blue-500 pl-3 py-2 rounded-r hover:bg-blue-50 transition-colors">
-                                <span class="block text-[9px] font-bold text-blue-600 uppercase mb-0.5">#02 Growth</span>
-                                <span class="block text-[10px] font-medium text-gray-800 leading-tight">ローン獲得PDCA体系化</span>
+                        <div class="border border-gray-200 rounded bg-white p-2 flex flex-col gap-2">
+                            <a href="#case-02" class="group block border-l-2 border-p-blue p-2 rounded-r hover:bg-blue-50 transition-colors">
+                                <span class="block text-[9px] font-bold text-p-blue uppercase mb-0.5">#02 Growth</span>
+                                <span class="block text-[10px] font-medium text-gray-800 leading-tight">ローン獲得PDCAの体系化</span>
                             </a>
-                            <a href="#case-04" class="group block border-l-2 border-blue-500 pl-3 py-2 rounded-r hover:bg-blue-50 transition-colors">
-                                <span class="block text-[9px] font-bold text-blue-600 uppercase mb-0.5">#04 Retention</span>
-                                <span class="block text-[10px] font-medium text-gray-800 leading-tight">No-codeと行動経済学による<br>LTV向上</span>
+                            <a href="#case-04" class="group block border-l-2 border-p-cyan p-2 rounded-r hover:bg-cyan-50 transition-colors">
+                                <span class="block text-[9px] font-bold text-p-cyan uppercase mb-0.5">#04 Retention</span>
+                                <span class="block text-[10px] font-medium text-gray-800 leading-tight">No-codeと行動心理学で<br>LTV向上</span>
                             </a>
                         </div>
-
-                        <div class="border border-gray-100 rounded bg-white p-2 relative">
-                            <a href="#case-03" class="group block border-l-2 border-rose-500 pl-3 py-2 rounded-r hover:bg-rose-50 transition-colors">
-                                <span class="block text-[9px] font-bold text-rose-600 uppercase mb-0.5">#03 Risk</span>
-                                <span class="block text-[10px] font-medium text-gray-800 leading-tight">UX摩擦による延滞リスク管理</span>
+                        <div class="border border-gray-200 rounded bg-white p-2 relative">
+                            <a href="#case-03" class="group block border-l-2 border-p-rose p-2 rounded-r hover:bg-rose-50 transition-colors">
+                                <span class="block text-[9px] font-bold text-p-rose uppercase mb-0.5">#03 Risk</span>
+                                <span class="block text-[10px] font-medium text-gray-800 leading-tight">UX摩擦によるリスク管理</span>
                             </a>
                             <span class="absolute bottom-1 right-2 text-[9px] font-bold text-gray-200 uppercase tracking-widest">Risk Mgmt</span>
                         </div>
                     </div>
 
                     <div class="grid grid-cols-[120px_1fr_1fr_1fr] gap-4 mb-4">
-                        <div class="bg-gray-50 rounded p-4 border border-gray-100 flex flex-col justify-center border-l-4 border-l-teal-500">
-                            <span class="font-family-montserrat text-[10px] font-bold tracking-widest text-teal-900 uppercase leading-tight">Product<br>& UX</span>
+                        <div class="bg-gray-50 rounded p-4 border border-gray-100 flex flex-col justify-center border-l-4 border-l-gray-300">
+                            <span class="font-family-montserrat text-[10px] font-bold tracking-widest text-gray-700 uppercase leading-tight">Product<br>& UX</span>
                             <span class="text-[9px] text-gray-400 mt-1">戦略・体験設計</span>
                         </div>
-                        
-                        <div class="border border-gray-100 rounded bg-white p-2 flex flex-col gap-2">
-                            <a href="#case-01" class="group block border-l-2 border-teal-500 pl-3 py-2 rounded-r hover:bg-teal-50 transition-colors">
-                                <span class="block text-[9px] font-bold text-teal-600 uppercase mb-0.5">#01 Strategy</span>
+                        <div class="border border-gray-200 rounded bg-white p-2 flex flex-col gap-2">
+                            <a href="#case-01" class="group block border-l-2 border-p-teal p-2 rounded-r hover:bg-teal-50 transition-colors">
+                                <span class="block text-[9px] font-bold text-p-teal uppercase mb-0.5">#01 Strategy</span>
                                 <span class="block text-[10px] font-medium text-gray-800 leading-tight">提供価値と市場位置の<br>再定義・合意形成</span>
                             </a>
-                            <div class="group block border-l-2 border-gray-300 pl-3 py-2 rounded-r opacity-60 cursor-default">
+                            <div class="group block border-l-2 border-gray-300 p-2 rounded-r opacity-60 cursor-default">
                                 <span class="block text-[9px] font-bold text-gray-500 uppercase mb-0.5"># Ethics</span>
                                 <span class="block text-[10px] font-medium text-gray-700 leading-tight">ダークパターン阻止と<br>UX倫理保護</span>
                             </div>
                         </div>
-
                         <div class="border border-dashed border-gray-200 rounded bg-gray-50/50 flex items-center justify-center p-2">
                             <div class="text-center"><span class="block text-[10px] font-bold text-gray-400">UI/UX Design Lead</span><span class="block text-[9px] text-gray-300 mt-1">全プロジェクトで実施</span></div>
                         </div>
-
-                        <div class="border border-gray-100 rounded bg-white p-2 relative">
-                            <a href="#case-06" class="group block border-l-2 border-indigo-500 pl-3 py-2 rounded-r hover:bg-indigo-50 transition-colors">
-                                <span class="block text-[9px] font-bold text-indigo-600 uppercase mb-0.5">#06 Assets</span>
-                                <span class="block text-[10px] font-medium text-gray-800 leading-tight">リサーチ民主化と<br>Atomic DB構築</span>
+                        <div class="border border-gray-200 rounded bg-white p-2 relative">
+                            <a href="#case-06" class="group block border-l-2 border-p-indigo p-2 rounded-r hover:bg-indigo-50 transition-colors">
+                                <span class="block text-[9px] font-bold text-p-indigo uppercase mb-0.5">#06 Assets</span>
+                                <span class="block text-[10px] font-medium text-gray-800 leading-tight">リサーチ民主化と<br>知見のDB化</span>
                             </a>
                             <span class="absolute bottom-1 right-2 text-[9px] font-bold text-gray-200 uppercase tracking-widest">Assets</span>
                         </div>
                     </div>
 
                     <div class="grid grid-cols-[120px_1fr_1fr_1fr] gap-4">
-                        <div class="bg-gray-50 rounded p-4 border border-gray-100 flex flex-col justify-center border-l-4 border-l-amber-500">
-                            <span class="font-family-montserrat text-[10px] font-bold tracking-widest text-amber-900 uppercase leading-tight">Org<br>& Culture</span>
+                        <div class="bg-gray-50 rounded p-4 border border-gray-100 flex flex-col justify-center border-l-4 border-l-gray-300">
+                            <span class="font-family-montserrat text-[10px] font-bold tracking-widest text-gray-700 uppercase leading-tight">Org<br>& Culture</span>
                             <span class="text-[9px] text-gray-400 mt-1">組織・基盤</span>
                         </div>
-                        
-                        <div class="border border-gray-100 rounded bg-white p-2">
-                            <a href="#case-05" class="group block border-l-2 border-amber-500 pl-3 py-2 rounded-r hover:bg-amber-50 transition-colors">
-                                <span class="block text-[9px] font-bold text-amber-600 uppercase mb-0.5">#05 Hiring</span>
+                        <div class="border border-gray-200 rounded bg-white p-2">
+                            <a href="#case-05" class="group block border-l-2 border-p-amber p-2 rounded-r hover:bg-amber-50 transition-colors">
+                                <span class="block text-[9px] font-bold text-p-amber uppercase mb-0.5">#05 Hiring</span>
                                 <span class="block text-[10px] font-medium text-gray-800 leading-tight">採用ワークショップの<br>CX設計と刷新</span>
                             </a>
                         </div>
-
                         <div class="border border-dashed border-gray-200 rounded bg-gray-50/50 flex items-center justify-center p-2">
                             <div class="text-center"><span class="block text-[10px] font-bold text-gray-400">Team Dev</span><span class="block text-[9px] text-gray-300 mt-1">メンター・FB制度設計</span></div>
                         </div>
-
-                        <div class="border border-gray-100 rounded bg-white p-2 relative">
-                            <a href="#case-07" class="group block border-l-2 border-amber-500 pl-3 py-2 rounded-r hover:bg-amber-50 transition-colors">
-                                <span class="block text-[9px] font-bold text-amber-600 uppercase mb-0.5">#07 Culture</span>
-                                <span class="block text-[10px] font-medium text-gray-800 leading-tight">TPI定量化とテスト文化の<br>全社標準化</span>
+                        <div class="border border-gray-200 rounded bg-white p-2 relative">
+                            <a href="#case-07" class="group block border-l-2 border-p-orange p-2 rounded-r hover:bg-orange-50 transition-colors">
+                                <span class="block text-[9px] font-bold text-p-orange uppercase mb-0.5">#07 Culture</span>
+                                <span class="block text-[10px] font-medium text-gray-800 leading-tight">UX品質の数値化と<br>テスト文化の標準化</span>
                             </a>
                             <span class="absolute bottom-1 right-2 text-[9px] font-bold text-gray-200 uppercase tracking-widest">Standard</span>
                         </div>
@@ -425,176 +433,134 @@
 
             <div class="border-t border-gray-800">
                 
-                <div id="case-01" onclick="openModal('images/loanawareness.png')" class="group relative py-10 border-b border-gray-800 transition-all duration-500 hover:bg-[#222] cursor-pointer">
+                <div id="case-01" onclick="openModal('loanawareness-final.html')" class="group relative py-12 border-b border-gray-800 transition-all duration-500 hover:bg-[#222] cursor-pointer">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
                         <div class="lg:col-span-4">
-                            <div class="flex items-center gap-3 mb-3"><span class="text-xs text-gray-500 font-mono-custom">CASE 01</span><div class="h-px w-8 bg-gray-700"></div></div>
-                            <h3 class="text-xl font-medium mb-3 leading-tight">ローン事業の<br>提供価値・ポジショニング再定義</h3>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="text-[9px] border border-gray-700 px-2 py-0.5 rounded text-gray-400 tracking-wider">Strategy</span>
-                                <span class="text-[9px] border border-gray-700 px-2 py-0.5 rounded text-gray-400 tracking-wider">PMM</span>
-                            </div>
+                            <div class="flex items-center gap-3 mb-3"><span class="text-xs text-gray-500 font-mono-custom">CASE 01</span><div class="h-px w-8 bg-p-teal"></div></div>
+                            <h3 class="text-xl font-medium mb-3 leading-tight group-hover:text-p-teal transition-colors">ローン事業の<br>提供価値・ポジショニング再定義</h3>
                         </div>
                         <div class="lg:col-span-5 border-l border-gray-800 pl-0 lg:pl-8 pt-4 lg:pt-0">
                             <span class="text-[9px] text-gray-500 uppercase tracking-widest block mb-2">The Approach</span>
-                            <p class="text-sm text-gray-300 font-light leading-relaxed">
-                                銀行の論理（速さ）と顧客の真理（安心）のギャップをリサーチで特定。指示を待たず自ら経営層へ提言し、「情緒的価値」を軸にした第3のポジションを確立。
-                            </p>
+                            <p class="text-sm text-gray-300 font-light leading-relaxed">銀行の論理（速さ）と顧客の真理（安心）のズレを調査で特定。指示を待たず自ら経営層へ提言し、「情緒的価値」を軸にした第3のポジションを確立。</p>
                         </div>
                         <div class="lg:col-span-3 flex flex-col justify-end items-start lg:items-end border-l border-gray-800 pl-0 lg:pl-8 pt-4 lg:pt-0">
                             <div class="text-left lg:text-right">
-                                <span class="text-3xl font-light text-white tracking-tighter">Concept Fixed</span>
-                                <p class="text-[9px] text-gray-500 uppercase tracking-widest mt-1">Strategic Consensus</p>
+                                <span class="text-3xl font-light text-p-teal tracking-tighter">Concept Fixed</span>
+                                <p class="text-[9px] text-gray-500 uppercase tracking-widest mt-1">戦略の合意・決定</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div id="case-02" onclick="openModal('images/loanpdca.png')" class="group relative py-10 border-b border-gray-800 transition-all duration-500 hover:bg-[#222] cursor-pointer">
+                <div id="case-02" onclick="openModal('loanpdca-final.html')" class="group relative py-12 border-b border-gray-800 transition-all duration-500 hover:bg-[#222] cursor-pointer">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
                         <div class="lg:col-span-4">
-                            <div class="flex items-center gap-3 mb-3"><span class="text-xs text-gray-500 font-mono-custom">CASE 02</span><div class="h-px w-8 bg-gray-700"></div></div>
-                            <h3 class="text-xl font-medium mb-3 leading-tight">ローン獲得数/CPA改善<br>PDCAプロジェクト</h3>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="text-[9px] border border-gray-700 px-2 py-0.5 rounded text-gray-400 tracking-wider">Growth Lead</span>
-                                <span class="text-[9px] border border-gray-700 px-2 py-0.5 rounded text-gray-400 tracking-wider">BizOps</span>
-                            </div>
+                            <div class="flex items-center gap-3 mb-3"><span class="text-xs text-gray-500 font-mono-custom">CASE 02</span><div class="h-px w-8 bg-p-blue"></div></div>
+                            <h3 class="text-xl font-medium mb-3 leading-tight group-hover:text-p-blue transition-colors">ローン獲得数/CPA改善<br>PDCAプロジェクト</h3>
                         </div>
                         <div class="lg:col-span-5 border-l border-gray-800 pl-0 lg:pl-8 pt-4 lg:pt-0">
                             <span class="text-[9px] text-gray-500 uppercase tracking-widest block mb-2">The Approach</span>
-                            <p class="text-sm text-gray-300 font-light leading-relaxed">
-                                KTL (Knowledge Transfer Learning) で議論の前提を統一。「感覚の空中戦」を排し、定量データとクリエイティブを紐づけた再現性あるPDCA基盤を構築。
-                            </p>
+                            <p class="text-sm text-gray-300 font-light leading-relaxed">勉強会(KTL)を開催してメンバーの知識レベルを統一。「感覚の空中戦」を排し、定量データとクリエイティブを紐づけた再現性あるPDCA基盤を構築。</p>
                         </div>
                         <div class="lg:col-span-3 flex flex-col justify-end items-start lg:items-end border-l border-gray-800 pl-0 lg:pl-8 pt-4 lg:pt-0">
                             <div class="text-left lg:text-right">
-                                <div class="flex items-baseline gap-1 justify-end"><span class="text-sm text-gray-400">CPA</span><span class="text-3xl font-light text-white tracking-tighter">120%</span></div>
-                                <p class="text-[9px] text-green-400 uppercase tracking-widest mt-1 flex items-center lg:justify-end gap-1"><span class="inline-block w-1.5 h-1.5 bg-green-400 rounded-full"></span>Improved YoY</p>
+                                <div class="flex items-baseline gap-1 justify-end"><span class="text-sm text-gray-400">CPA</span><span class="text-3xl font-light text-p-blue tracking-tighter">120%</span></div>
+                                <p class="text-[9px] text-gray-500 uppercase tracking-widest mt-1">獲得効率の良化</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div id="case-03" onclick="openModal('images/loanproductkaizen.png')" class="group relative py-10 border-b border-gray-800 transition-all duration-500 hover:bg-[#222] cursor-pointer">
+                <div id="case-03" onclick="openModal('loanproductkaizen-final.html')" class="group relative py-12 border-b border-gray-800 transition-all duration-500 hover:bg-[#222] cursor-pointer">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
                         <div class="lg:col-span-4">
-                            <div class="flex items-center gap-3 mb-3"><span class="text-xs text-gray-500 font-mono-custom">CASE 03</span><div class="h-px w-8 bg-gray-700"></div></div>
-                            <h3 class="text-xl font-medium mb-3 leading-tight">UX介入による<br>貸し倒れリスク(延滞率)低減</h3>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="text-[9px] border border-gray-700 px-2 py-0.5 rounded text-gray-400 tracking-wider">PdM</span>
-                                <span class="text-[9px] border border-gray-700 px-2 py-0.5 rounded text-gray-400 tracking-wider">Behavioral Design</span>
-                            </div>
+                            <div class="flex items-center gap-3 mb-3"><span class="text-xs text-gray-500 font-mono-custom">CASE 03</span><div class="h-px w-8 bg-p-rose"></div></div>
+                            <h3 class="text-xl font-medium mb-3 leading-tight group-hover:text-p-rose transition-colors">UX介入による<br>貸し倒れリスク(延滞率)低減</h3>
                         </div>
                         <div class="lg:col-span-5 border-l border-gray-800 pl-0 lg:pl-8 pt-4 lg:pt-0">
                             <span class="text-[9px] text-gray-500 uppercase tracking-widest block mb-2">The Approach</span>
-                            <p class="text-sm text-gray-300 font-light leading-relaxed">
-                                あえて操作を遮る「意図的な摩擦」をUXに設計。最も注意が集まる瞬間にリスクを認知させ、行動変容を促すことで事業収益（債権品質）を向上。
-                            </p>
+                            <p class="text-sm text-gray-300 font-light leading-relaxed">あえて操作を遮る「意図的な摩擦」をUXに設計。最も注意が集まる瞬間にリスクを認知させ、行動変容を促すことで事業収益（債権品質）を向上。</p>
                         </div>
                         <div class="lg:col-span-3 flex flex-col justify-end items-start lg:items-end border-l border-gray-800 pl-0 lg:pl-8 pt-4 lg:pt-0">
                             <div class="text-left lg:text-right">
-                                <div class="flex items-baseline gap-1 justify-end"><span class="text-sm text-gray-400">Delay Rate</span><span class="text-3xl font-light text-white tracking-tighter">-1%</span></div>
-                                <p class="text-[9px] text-green-400 uppercase tracking-widest mt-1 flex items-center lg:justify-end gap-1"><span class="inline-block w-1.5 h-1.5 bg-green-400 rounded-full"></span>Profitability UP</p>
+                                <div class="flex items-baseline gap-1 justify-end"><span class="text-sm text-gray-400">Delay</span><span class="text-3xl font-light text-p-rose tracking-tighter">-1%</span></div>
+                                <p class="text-[9px] text-gray-500 uppercase tracking-widest mt-1">リスクの減少</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div id="case-04" onclick="openModal('images/boxcrm.png')" class="group relative py-10 border-b border-gray-800 transition-all duration-500 hover:bg-[#222] cursor-pointer">
+                <div id="case-04" onclick="openModal('boxcrm-final.html')" class="group relative py-12 border-b border-gray-800 transition-all duration-500 hover:bg-[#222] cursor-pointer">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
                         <div class="lg:col-span-4">
-                            <div class="flex items-center gap-3 mb-3"><span class="text-xs text-gray-500 font-mono-custom">CASE 04</span><div class="h-px w-8 bg-gray-700"></div></div>
-                            <h3 class="text-xl font-medium mb-3 leading-tight">No-code施策による<br>ボックス預金利用改善</h3>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="text-[9px] border border-gray-700 px-2 py-0.5 rounded text-gray-400 tracking-wider">Growth</span>
-                                <span class="text-[9px] border border-gray-700 px-2 py-0.5 rounded text-gray-400 tracking-wider">CRM</span>
-                            </div>
+                            <div class="flex items-center gap-3 mb-3"><span class="text-xs text-gray-500 font-mono-custom">CASE 04</span><div class="h-px w-8 bg-p-cyan"></div></div>
+                            <h3 class="text-xl font-medium mb-3 leading-tight group-hover:text-p-cyan transition-colors">No-code施策による<br>ボックス預金利用改善</h3>
                         </div>
                         <div class="lg:col-span-5 border-l border-gray-800 pl-0 lg:pl-8 pt-4 lg:pt-0">
                             <span class="text-[9px] text-gray-500 uppercase tracking-widest block mb-2">The Approach</span>
-                            <p class="text-sm text-gray-300 font-light leading-relaxed">
-                                エンジニアリソースに依存しないNo-codeツール(Repro)を活用。「心の家計簿」を刺激する訴求で、泥臭く数値を改善。
-                            </p>
+                            <p class="text-sm text-gray-300 font-light leading-relaxed">エンジニアリソースに依存しないNo-codeツール(Repro)を活用。「心の家計簿」を刺激する訴求で、泥臭く数値を改善。</p>
                         </div>
                         <div class="lg:col-span-3 flex flex-col justify-end items-start lg:items-end border-l border-gray-800 pl-0 lg:pl-8 pt-4 lg:pt-0">
                             <div class="text-left lg:text-right">
-                                <div class="flex items-baseline gap-1 justify-end"><span class="text-sm text-gray-400">Balance</span><span class="text-3xl font-light text-white tracking-tighter">2.5x</span></div>
-                                <p class="text-[9px] text-green-400 uppercase tracking-widest mt-1 flex items-center lg:justify-end gap-1"><span class="inline-block w-1.5 h-1.5 bg-green-400 rounded-full"></span>Retention UP</p>
+                                <div class="flex items-baseline gap-1 justify-end"><span class="text-sm text-gray-400">Balance</span><span class="text-3xl font-light text-p-cyan tracking-tighter">2.5x</span></div>
+                                <p class="text-[9px] text-gray-500 uppercase tracking-widest mt-1">利用残高の増加</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div id="case-05" onclick="openModal('images/workshop.png')" class="group relative py-10 border-b border-gray-800 transition-all duration-500 hover:bg-[#222] cursor-pointer">
+                <div id="case-05" onclick="openModal('workshop-recruiting-final.html')" class="group relative py-12 border-b border-gray-800 transition-all duration-500 hover:bg-[#222] cursor-pointer">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
                         <div class="lg:col-span-4">
-                            <div class="flex items-center gap-3 mb-3"><span class="text-xs text-gray-500 font-mono-custom">CASE 05</span><div class="h-px w-8 bg-gray-700"></div></div>
-                            <h3 class="text-xl font-medium mb-3 leading-tight">新卒採用ワークショップの<br>CX(候補者体験)刷新</h3>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="text-[9px] border border-gray-700 px-2 py-0.5 rounded text-gray-400 tracking-wider">Hiring Manager</span>
-                                <span class="text-[9px] border border-gray-700 px-2 py-0.5 rounded text-gray-400 tracking-wider">Org Design</span>
-                            </div>
+                            <div class="flex items-center gap-3 mb-3"><span class="text-xs text-gray-500 font-mono-custom">CASE 05</span><div class="h-px w-8 bg-p-amber"></div></div>
+                            <h3 class="text-xl font-medium mb-3 leading-tight group-hover:text-p-amber transition-colors">新卒採用ワークショップの<br>CX(候補者体験)刷新</h3>
                         </div>
                         <div class="lg:col-span-5 border-l border-gray-800 pl-0 lg:pl-8 pt-4 lg:pt-0">
                             <span class="text-[9px] text-gray-500 uppercase tracking-widest block mb-2">The Approach</span>
-                            <p class="text-sm text-gray-300 font-light leading-relaxed">
-                                「お客様扱い」を廃止し、生成AI×実データを用いた超・実践型プログラムへ刷新。本気のFB文化で優秀層の心を掴み、採用効率を劇的に改善。
-                            </p>
+                            <p class="text-sm text-gray-300 font-light leading-relaxed">「お客様扱い」を廃止し、生成AI×実データを用いた超・実践型プログラムへ刷新。本気のフィードバック文化で優秀層の心を掴み、採用効率を劇的に改善。</p>
                         </div>
                         <div class="lg:col-span-3 flex flex-col justify-end items-start lg:items-end border-l border-gray-800 pl-0 lg:pl-8 pt-4 lg:pt-0">
                             <div class="text-left lg:text-right">
-                                <span class="text-3xl font-light text-white tracking-tighter">1st Round Finish</span>
-                                <p class="text-[9px] text-gray-500 uppercase tracking-widest mt-1">Recruiting Speed Max</p>
+                                <span class="text-3xl font-light text-white tracking-tighter">Speed Max</span>
+                                <p class="text-[9px] text-gray-500 uppercase tracking-widest mt-1">1次募集で採用完了</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div id="case-06" onclick="openModal('images/userinterview.png')" class="group relative py-10 border-b border-gray-800 transition-all duration-500 hover:bg-[#222] cursor-pointer">
+                <div id="case-06" onclick="openModal('userinterview-final.html')" class="group relative py-12 border-b border-gray-800 transition-all duration-500 hover:bg-[#222] cursor-pointer">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
                         <div class="lg:col-span-4">
-                            <div class="flex items-center gap-3 mb-3"><span class="text-xs text-gray-500 font-mono-custom">CASE 06</span><div class="h-px w-8 bg-gray-700"></div></div>
-                            <h3 class="text-xl font-medium mb-3 leading-tight">ユーザーインタビューの<br>仕組み化と民主化</h3>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="text-[9px] border border-gray-700 px-2 py-0.5 rounded text-gray-400 tracking-wider">Research Ops</span>
-                                <span class="text-[9px] border border-gray-700 px-2 py-0.5 rounded text-gray-400 tracking-wider">Process Design</span>
-                            </div>
+                            <div class="flex items-center gap-3 mb-3"><span class="text-xs text-gray-500 font-mono-custom">CASE 06</span><div class="h-px w-8 bg-p-indigo"></div></div>
+                            <h3 class="text-xl font-medium mb-3 leading-tight group-hover:text-p-indigo transition-colors">ユーザーインタビューの<br>仕組み化と民主化</h3>
                         </div>
                         <div class="lg:col-span-5 border-l border-gray-800 pl-0 lg:pl-8 pt-4 lg:pt-0">
                             <span class="text-[9px] text-gray-500 uppercase tracking-widest block mb-2">The Approach</span>
-                            <p class="text-sm text-gray-300 font-light leading-relaxed">
-                                法務連携により「攻め」のリクルーティングを開拓し、調整フローを完全型化。「誰でもできる」状態を作り、全社の意思決定に顧客の声を実装。
-                            </p>
+                            <p class="text-sm text-gray-300 font-light leading-relaxed">法務連携により「攻め」のリクルーティングを開拓し、調整フローを完全型化。「誰でもできる」状態を作り、全社の意思決定に顧客の声を実装。</p>
                         </div>
                         <div class="lg:col-span-3 flex flex-col justify-end items-start lg:items-end border-l border-gray-800 pl-0 lg:pl-8 pt-4 lg:pt-0">
                             <div class="text-left lg:text-right">
                                 <div class="flex items-baseline gap-1 justify-end"><span class="text-3xl font-light text-white tracking-tighter">60+</span><span class="text-sm text-gray-400">/ Year</span></div>
-                                <p class="text-[9px] text-gray-500 uppercase tracking-widest mt-1">High Frequency Pipeline</p>
+                                <p class="text-[9px] text-gray-500 uppercase tracking-widest mt-1">年間実施数</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div id="case-07" onclick="openModal('images/userbilitytest.png')" class="group relative py-10 border-b border-gray-800 transition-all duration-500 hover:bg-[#222] cursor-pointer">
+                <div id="case-07" onclick="openModal('userbilitytest-final.html')" class="group relative py-12 border-b border-gray-800 transition-all duration-500 hover:bg-[#222] cursor-pointer">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
                         <div class="lg:col-span-4">
-                            <div class="flex items-center gap-3 mb-3"><span class="text-xs text-gray-500 font-mono-custom">CASE 07</span><div class="h-px w-8 bg-gray-700"></div></div>
-                            <h3 class="text-xl font-medium mb-3 leading-tight">UX品質の定量化と<br>「テスト文化」の全社実装</h3>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="text-[9px] border border-gray-700 px-2 py-0.5 rounded text-gray-400 tracking-wider">Design Ops</span>
-                                <span class="text-[9px] border border-gray-700 px-2 py-0.5 rounded text-gray-400 tracking-wider">QA</span>
-                            </div>
+                            <div class="flex items-center gap-3 mb-3"><span class="text-xs text-gray-500 font-mono-custom">CASE 07</span><div class="h-px w-8 bg-p-orange"></div></div>
+                            <h3 class="text-xl font-medium mb-3 leading-tight group-hover:text-p-orange transition-colors">UX品質の定量化と<br>「テスト文化」の全社実装</h3>
                         </div>
                         <div class="lg:col-span-5 border-l border-gray-800 pl-0 lg:pl-8 pt-4 lg:pt-0">
                             <span class="text-[9px] text-gray-500 uppercase tracking-widest block mb-2">The Approach</span>
-                            <p class="text-sm text-gray-300 font-light leading-relaxed">
-                                TPIスコアリングによる品質の定量化と、テスト通過をリリース必須要件とするプロセス変革。感覚論を排し、エンジニアリングとしての品質担保を実現。
-                            </p>
+                            <p class="text-sm text-gray-300 font-light leading-relaxed">品質を数値化(TPI)し、テスト通過をリリース必須要件とするプロセス変革。感覚論を排し、エンジニアリングとしての品質担保を実現。</p>
                         </div>
                         <div class="lg:col-span-3 flex flex-col justify-end items-start lg:items-end border-l border-gray-800 pl-0 lg:pl-8 pt-4 lg:pt-0">
                             <div class="text-left lg:text-right">
                                 <span class="text-3xl font-light text-white tracking-tighter">Reduced</span>
-                                <p class="text-[9px] text-gray-500 uppercase tracking-widest mt-1">Rework Cost</p>
+                                <p class="text-[9px] text-gray-500 uppercase tracking-widest mt-1">手戻り工数の削減</p>
                             </div>
                         </div>
                     </div>
@@ -613,18 +579,18 @@
                         <ul class="space-y-5">
                             <li class="block">
                                 <span class="text-[10px] font-mono-custom text-gray-400 block mb-1 uppercase tracking-wider">Core Skill</span>
-                                <span class="text-sm font-medium block mb-1">Value Proposition</span>
-                                <span class="text-xs text-gray-500 block font-light leading-relaxed">提供価値策定 / コンセプト設計 / サービスブループリント</span>
+                                <span class="text-sm font-medium block mb-1">サービスの価値定義</span>
+                                <span class="text-xs text-gray-500 block font-light leading-relaxed">強みの言語化 / コンセプト設計 / サービスブループリント</span>
                             </li>
                             <li class="block">
                                 <span class="text-[10px] font-mono-custom text-gray-400 block mb-1 uppercase tracking-wider">Definition</span>
-                                <span class="text-sm font-medium block mb-1">Requirement Def.</span>
-                                <span class="text-xs text-gray-500 block font-light leading-relaxed">要件定義 / 機能仕様策定 / ユーザーストーリーマッピング</span>
+                                <span class="text-sm font-medium block mb-1">要件定義・仕様策定</span>
+                                <span class="text-xs text-gray-500 block font-light leading-relaxed">必要な機能の洗い出し / エンジニアとの連携</span>
                             </li>
                             <li class="block">
                                 <span class="text-[10px] font-mono-custom text-gray-400 block mb-1 uppercase tracking-wider">Experience</span>
-                                <span class="text-sm font-medium block mb-1">CX Design</span>
-                                <span class="text-xs text-gray-500 block font-light leading-relaxed">カスタマージャーニーマップ / ペルソナ策定 / As-Is To-Be分析</span>
+                                <span class="text-sm font-medium block mb-1">顧客体験(CX)の設計</span>
+                                <span class="text-xs text-gray-500 block font-light leading-relaxed">カスタマージャーニーマップ / ペルソナ策定 / 体験設計</span>
                             </li>
                         </ul>
                     </div>
@@ -636,18 +602,18 @@
                         <ul class="space-y-5">
                             <li class="block">
                                 <span class="text-[10px] font-mono-custom text-gray-400 block mb-1 uppercase tracking-wider">Management</span>
-                                <span class="text-sm font-medium block mb-1">KPI Design</span>
-                                <span class="text-xs text-gray-500 block font-light leading-relaxed">KGI・KPI設計 / 施策優先度策定 / ロードマップ管理</span>
+                                <span class="text-sm font-medium block mb-1">KPI設計・管理</span>
+                                <span class="text-xs text-gray-500 block font-light leading-relaxed">目標数値の設計 / 施策の優先順位付け</span>
                             </li>
                             <li class="block">
                                 <span class="text-[10px] font-mono-custom text-gray-400 block mb-1 uppercase tracking-wider">Finance</span>
-                                <span class="text-sm font-medium block mb-1">Business Model</span>
-                                <span class="text-xs text-gray-500 block font-light leading-relaxed">収益構造設計 / ROI試算 / 事業計画策定</span>
+                                <span class="text-sm font-medium block mb-1">収益モデル・事業計画</span>
+                                <span class="text-xs text-gray-500 block font-light leading-relaxed">稼ぐ仕組みの設計 / 費用対効果(ROI)の試算</span>
                             </li>
                             <li class="block">
                                 <span class="text-[10px] font-mono-custom text-gray-400 block mb-1 uppercase tracking-wider">Analytics</span>
-                                <span class="text-sm font-medium block mb-1">Funnel Analysis</span>
-                                <span class="text-xs text-gray-500 block font-light leading-relaxed">ファネル分析 / 離脱率改善 / SQL / データ分析</span>
+                                <span class="text-sm font-medium block mb-1">データ分析・改善</span>
+                                <span class="text-xs text-gray-500 block font-light leading-relaxed">離脱箇所の特定 / SQL / データ分析</span>
                             </li>
                         </ul>
                     </div>
@@ -659,18 +625,18 @@
                         <ul class="space-y-5">
                             <li class="block">
                                 <span class="text-[10px] font-mono-custom text-gray-400 block mb-1 uppercase tracking-wider">Qualitative</span>
-                                <span class="text-sm font-medium block mb-1">User Interview</span>
-                                <span class="text-xs text-gray-500 block font-light leading-relaxed">デプスインタビュー / エスノグラフィ / 行動観察調査</span>
+                                <span class="text-sm font-medium block mb-1">ユーザーインタビュー</span>
+                                <span class="text-xs text-gray-500 block font-light leading-relaxed">顧客ヒアリング / 行動観察 / 本音の深掘り</span>
                             </li>
                             <li class="block">
                                 <span class="text-[10px] font-mono-custom text-gray-400 block mb-1 uppercase tracking-wider">Quantitative</span>
-                                <span class="text-sm font-medium block mb-1">Usability Testing</span>
+                                <span class="text-sm font-medium block mb-1">使いやすさの検証</span>
                                 <span class="text-xs text-gray-500 block font-light leading-relaxed">ユーザビリティテスト / アンケート設計 / A/Bテスト</span>
                             </li>
                             <li class="block">
                                 <span class="text-[10px] font-mono-custom text-gray-400 block mb-1 uppercase tracking-wider">Ops</span>
-                                <span class="text-sm font-medium block mb-1">Research Ops</span>
-                                <span class="text-xs text-gray-500 block font-light leading-relaxed">リサーチの仕組み化 / データベース構築 / 民主化推進</span>
+                                <span class="text-sm font-medium block mb-1">リサーチ体制の構築</span>
+                                <span class="text-xs text-gray-500 block font-light leading-relaxed">調査の仕組み化 / 知見のデータベース化 / 民主化</span>
                             </li>
                         </ul>
                     </div>
@@ -682,18 +648,18 @@
                         <ul class="space-y-5">
                             <li class="block">
                                 <span class="text-[10px] font-mono-custom text-gray-400 block mb-1 uppercase tracking-wider">Leadership</span>
-                                <span class="text-sm font-medium block mb-1">Zero to One</span>
-                                <span class="text-xs text-gray-500 block font-light leading-relaxed">0→1 立ち上げ / 合意形成 / ファシリテーション</span>
+                                <span class="text-sm font-medium block mb-1">0→1 新規事業立ち上げ</span>
+                                <span class="text-xs text-gray-500 block font-light leading-relaxed">プロジェクト推進 / 合意形成 / ファシリテーション</span>
                             </li>
                             <li class="block">
                                 <span class="text-[10px] font-mono-custom text-gray-400 block mb-1 uppercase tracking-wider">Prototyping</span>
-                                <span class="text-sm font-medium block mb-1">UI Design</span>
-                                <span class="text-xs text-gray-500 block font-light leading-relaxed">Figma / Prototyping / Wireframing / Information Arch.</span>
+                                <span class="text-sm font-medium block mb-1">画面設計・プロトタイプ</span>
+                                <span class="text-xs text-gray-500 block font-light leading-relaxed">Figma / 画面遷移図 / ワイヤーフレーム作成</span>
                             </li>
                             <li class="block">
                                 <span class="text-[10px] font-mono-custom text-gray-400 block mb-1 uppercase tracking-wider">Tech</span>
-                                <span class="text-sm font-medium block mb-1">Engineering</span>
-                                <span class="text-xs text-gray-500 block font-light leading-relaxed">HTML・CSS / Basic JavaScript / フロントエンド理解</span>
+                                <span class="text-sm font-medium block mb-1">実装・技術の理解</span>
+                                <span class="text-xs text-gray-500 block font-light leading-relaxed">HTML・CSS / 基礎的なJavaScript / フロントエンド理解</span>
                             </li>
                         </ul>
                     </div>
@@ -702,7 +668,7 @@
             </div>
         </section>
 
-        <section id="about" class="w-full py-20 lg:py-24 px-6 lg:px-12">
+        <section id="about" class="w-full py-20 lg:py-24 px-6 lg:px-12 border-t border-gray-200">
             <span class="txt-label mb-12 lg:mb-16 block">06 — HISTORY</span>
             <div class="w-full border-t border-gray-200">
                 <div class="grid grid-cols-12 py-6 lg:py-8 border-b border-gray-200 hover:bg-gray-50 transition reveal-wrap items-baseline">
@@ -739,25 +705,29 @@
         <div class="text-right"><a href="mailto:email@example.com" class="text-lg font-medium hover-underline">Get in touch</a></div>
     </footer>
 
-    <div id="image-modal" class="fixed inset-0 z-[100] flex justify-center items-center bg-black/80 backdrop-blur-sm hidden cursor-zoom-out" onclick="closeModal()">
-        <div id="modal-content" class="relative max-w-5xl w-full mx-4" onclick="event.stopPropagation()">
-            <button onclick="closeModal()" class="absolute -top-12 right-0 text-white text-sm font-mono-custom tracking-widest hover:opacity-70 transition-opacity">CLOSE [ESC]</button>
-            <img id="modal-image" src="" alt="Project Detail" class="w-full h-auto rounded shadow-2xl">
+    <div id="image-modal" class="fixed inset-0 z-[100] flex justify-center items-center bg-black/90 backdrop-blur-sm hidden cursor-zoom-out" onclick="closeModal()">
+        <div id="modal-content" class="relative w-full max-w-[1280px] h-auto aspect-video mx-4 shadow-2xl" onclick="event.stopPropagation()">
+            <button onclick="closeModal()" class="absolute -top-10 right-0 text-white text-sm font-mono-custom tracking-widest hover:opacity-70 transition-opacity flex items-center gap-2">
+                <span>CLOSE [ESC]</span>
+            </button>
+            <iframe id="modal-frame" src="" class="w-full h-full bg-white rounded-lg border-0"></iframe>
         </div>
     </div>
 
     <script>
-        function openModal(imageSrc) {
+        function openModal(htmlSrc) {
             const modal = document.getElementById('image-modal');
-            const modalImg = document.getElementById('modal-image');
-            modalImg.src = imageSrc;
+            const frame = document.getElementById('modal-frame');
+            frame.src = htmlSrc; // Set iframe source to HTML file
             modal.classList.remove('hidden');
             document.body.style.overflow = 'hidden';
         }
 
         function closeModal() {
             const modal = document.getElementById('image-modal');
+            const frame = document.getElementById('modal-frame');
             modal.classList.add('hidden');
+            setTimeout(() => { frame.src = ''; }, 300); // Clear source after fade out
             document.body.style.overflow = '';
         }
 

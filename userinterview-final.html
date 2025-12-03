@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Research Ops (Minimalist)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #111827;
+        }
+        .slide-canvas {
+            width: 1280px;
+            height: 720px;
+            background-color: #ffffff;
+            position: relative;
+            padding: 80px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        /* Minimalist Accent: Indigo / Deep Blue */
+        .accent-color { color: #4f46e5; } 
+        .accent-bg { background-color: #4f46e5; }
+        
+        .grid-line {
+            border-top: 1px solid #e5e7eb;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slide-canvas">
+        
+        <div>
+            <div class="flex justify-between items-start mb-6">
+                <div class="text-xs font-bold tracking-[0.2em] text-gray-400 uppercase">Project: Research Ops & Democratization</div>
+                <div class="text-xs font-medium text-gray-400">Process Design / Knowledge Mgmt.</div>
+            </div>
+
+            <div class="flex justify-between items-end">
+                <h1 class="text-5xl font-bold leading-tight tracking-tight text-gray-900 w-2/3">
+                    「通知頼み」から脱却する。<br>
+                    攻めの<span class="accent-color">Research Ops</span>へ。
+                </h1>
+                
+                <div class="text-right">
+                    <div class="flex items-baseline justify-end gap-1">
+                        <span class="text-sm font-bold text-gray-400 mr-2">PIPELINE</span>
+                        <span class="text-6xl font-bold accent-color tracking-tighter">60</span>
+                        <span class="text-lg font-medium text-gray-600">Cases/Year</span>
+                    </div>
+                    <p class="text-xs text-gray-400 mt-1">全社重要案件へ顧客インサイトを常時供給</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-12 w-full mt-12 pt-8 border-t border-gray-200">
+            
+            <div class="group">
+                <div class="text-xs font-bold text-gray-300 mb-4 group-hover:text-gray-900 transition-colors">01 / ACCESS</div>
+                <h3 class="text-xl font-bold mb-3">法務連携と「攻め」</h3>
+                <p class="text-sm text-gray-600 leading-7 mb-4">
+                    アプリ通知だけでは真のロイヤル層には届かない。<br>
+                    法務と協議し、タブー視されていた「取引データに基づく直接アプローチ」の運用フローを確立。
+                </p>
+                <div class="text-xs font-mono text-gray-400 bg-gray-50 inline-block px-2 py-1 rounded">Output: リクルーティング規定</div>
+            </div>
+
+            <div class="group">
+                <div class="text-xs font-bold text-gray-300 mb-4 group-hover:text-gray-900 transition-colors">02 / OPERATIONS</div>
+                <h3 class="text-xl font-bold mb-3">複雑性のパッケージ化</h3>
+                <p class="text-sm text-gray-600 leading-7 mb-4">
+                    PM・CS・経理など調整コストの高さがボトルネック。<br>
+                    全連絡・依頼をテンプレート化し、誰でも「最短・抜け漏れなし」で調整完結する仕組みへ。
+                </p>
+                <div class="text-xs font-mono text-gray-400 bg-gray-50 inline-block px-2 py-1 rounded">Output: 実施運用マニュアル</div>
+            </div>
+
+            <div class="group">
+                <div class="text-xs font-bold text-gray-300 mb-4 group-hover:text-gray-900 transition-colors">03 / ASSET</div>
+                <h3 class="text-xl font-bold mb-3">インサイトの資産化</h3>
+                <p class="text-sm text-gray-600 leading-7 mb-4">
+                    安定供給される顧客の声は、ポジショニング等の重要局面で活躍。<br>
+                    さらに「Atomic Research」によるDB構築を進め、知見が循環する組織を目指す。
+                </p>
+                <div class="text-xs font-mono text-gray-400 bg-gray-50 inline-block px-2 py-1 rounded">Output: Atomic Research (WIP)</div>
+            </div>
+
+        </div>
+
+        <div class="border-t border-gray-200 pt-6 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <div class="w-2 h-2 accent-bg rounded-full"></div>
+                <span class="text-xs font-bold tracking-widest text-gray-400 uppercase">My Core Value</span>
+            </div>
+            <p class="text-sm font-medium text-gray-600">
+                攻めのデータ活用と守りの法務遵守を両立。「誰もが顧客の声に触れられる基盤」で意思決定の質を高める。
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>

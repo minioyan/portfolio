@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Strategy Project (Minimalist)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #111827;
+        }
+        .slide-canvas {
+            width: 1280px;
+            height: 720px;
+            background-color: #ffffff;
+            position: relative;
+            padding: 80px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        /* Minimalist Accent: Teal (Strategy & Freshness) */
+        .accent-color { color: #0d9488; } 
+        .accent-bg { background-color: #0d9488; }
+        
+        .grid-line {
+            border-top: 1px solid #e5e7eb;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slide-canvas">
+        
+        <div>
+            <div class="flex justify-between items-start mb-6">
+                <div class="text-xs font-bold tracking-[0.2em] text-gray-400 uppercase">Project: Brand Strategy & Re-Positioning</div>
+                <div class="text-xs font-medium text-gray-400">Initiator & Lead / PMM</div>
+            </div>
+
+            <div class="flex justify-between items-end">
+                <h1 class="text-5xl font-bold leading-tight tracking-tight text-gray-900 w-2/3">
+                    「銀行の論理」を疑う。<br>
+                    自ら仕掛ける<span class="accent-color">ポジショニング</span>変革。
+                </h1>
+                
+                <div class="text-right">
+                    <div class="flex flex-col items-end">
+                        <span class="text-sm font-bold text-gray-400 mb-1 tracking-wider">PROJECT SCOPE</span>
+                        <span class="text-4xl font-bold text-gray-800 tracking-tight">Company-wide</span>
+                        <div class="flex items-center gap-2 mt-1">
+                            <span class="w-2 h-2 rounded-full accent-bg animate-pulse"></span>
+                            <span class="text-lg font-bold accent-color">Concept Fixed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-12 w-full mt-12 pt-8 border-t border-gray-200">
+            
+            <div class="group">
+                <div class="text-xs font-bold text-gray-300 mb-4 group-hover:text-gray-900 transition-colors">01 / INSIGHT</div>
+                <h3 class="text-xl font-bold mb-3">銀行の論理 vs 顧客の真理</h3>
+                <p class="text-sm text-gray-600 leading-7 mb-4">
+                    銀行は「速さ・審査」を強みと過信。<br>
+                    調査により、顧客の真のニーズは「秘匿性」と「心理的負担減」にあることを解明し、前提を覆した。
+                </p>
+                <div class="text-xs font-mono text-gray-400 bg-gray-50 inline-block px-2 py-1 rounded">Output: 顧客受容性レポート</div>
+            </div>
+
+            <div class="group">
+                <div class="text-xs font-bold text-gray-300 mb-4 group-hover:text-gray-900 transition-colors">02 / STRATEGY</div>
+                <h3 class="text-xl font-bold mb-3">資源集中の意思決定</h3>
+                <p class="text-sm text-gray-600 leading-7 mb-4">
+                    ターゲットを絞るリスクを懸念する経営層に対し、自社の体力不足をデータで提示。<br>
+                    消費者金融でもメガバンでもない「第3のポジション」を定義。
+                </p>
+                <div class="text-xs font-mono text-gray-400 bg-gray-50 inline-block px-2 py-1 rounded">Output: ポジショニングマップ</div>
+            </div>
+
+            <div class="group">
+                <div class="text-xs font-bold text-gray-300 mb-4 group-hover:text-gray-900 transition-colors">03 / CREATIVE</div>
+                <h3 class="text-xl font-bold mb-3">脱・イラスト一辺倒</h3>
+                <p class="text-sm text-gray-600 leading-7 mb-4">
+                    金融としての信頼を担保するため、実写タレント起用へ舵切り。<br>
+                    「実写（信頼）× アニメ（独自性）」のハイブリッド構成で競合埋没を防ぐ。
+                </p>
+                <div class="text-xs font-mono text-gray-400 bg-gray-50 inline-block px-2 py-1 rounded">Output: 新コンセプト動画 (WIP)</div>
+            </div>
+
+        </div>
+
+        <div class="border-t border-gray-200 pt-6 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <div class="w-2 h-2 accent-bg rounded-full"></div>
+                <span class="text-xs font-bold tracking-widest text-gray-400 uppercase">My Core Value</span>
+            </div>
+            <p class="text-sm font-medium text-gray-600">
+                指示を待たず、自ら「提供価値」そのものを再定義する。経営判断を引き出し、勝てる市場位置を確立する。
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Risk Project (Minimalist)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #111827;
+        }
+        .slide-canvas {
+            width: 1280px;
+            height: 720px;
+            background-color: #ffffff;
+            position: relative;
+            padding: 80px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        /* Minimalist Accent: Rose Red (Risk & Warning) */
+        .accent-color { color: #e11d48; } 
+        .accent-bg { background-color: #e11d48; }
+        
+        .grid-line {
+            border-top: 1px solid #e5e7eb;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slide-canvas">
+        
+        <div>
+            <div class="flex justify-between items-start mb-6">
+                <div class="text-xs font-bold tracking-[0.2em] text-gray-400 uppercase">Project: Risk Mgmt & Behavioral Design</div>
+                <div class="text-xs font-medium text-gray-400">PdM / UX Design</div>
+            </div>
+
+            <div class="flex justify-between items-end">
+                <h1 class="text-5xl font-bold leading-tight tracking-tight text-gray-900 w-2/3">
+                    「スムーズさ」をあえて殺す。<br>
+                    UXで<span class="accent-color">貸し倒れリスク</span>を制御する。
+                </h1>
+                
+                <div class="text-right">
+                    <div class="flex items-baseline justify-end gap-1">
+                        <span class="text-sm font-bold text-gray-400 mr-2">1st DELINQUENCY</span>
+                        <span class="text-6xl font-bold accent-color tracking-tighter">-5</span>
+                        <span class="text-lg font-medium text-gray-600">%</span>
+                    </div>
+                    <p class="text-xs text-gray-400 mt-1">初回延滞率の大幅減 / 全体延滞率 -1%</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-12 w-full mt-12 pt-8 border-t border-gray-200">
+            
+            <div class="group">
+                <div class="text-xs font-bold text-gray-300 mb-4 group-hover:text-gray-900 transition-colors">01 / DISCOVERY</div>
+                <h3 class="text-xl font-bold mb-3">「悪意」か「無知」か</h3>
+                <p class="text-sm text-gray-600 leading-7 mb-4">
+                    CSログ分析により、多くの延滞原因は資金不足ではなく「仕組みの誤認」であると特定。<br>
+                    ユーザーのモラルではなく<span class="font-bold text-gray-800">「UIの情報の欠落」</span>にメスを入れる。
+                </p>
+                <div class="text-xs font-mono text-gray-400 bg-gray-50 inline-block px-2 py-1 rounded">Output: 延滞要因分析レポート</div>
+            </div>
+
+            <div class="group">
+                <div class="text-xs font-bold text-gray-300 mb-4 group-hover:text-gray-900 transition-colors">02 / DECISION</div>
+                <h3 class="text-xl font-bold mb-3">「摩擦」の意図的設計</h3>
+                <p class="text-sm text-gray-600 leading-7 mb-4">
+                    「心地よいUX」を否定し、あえて操作を遮るポップアップを実装。<br>
+                    最も注意が集まる瞬間に強制的に認知させ、機能追加ではなく<span class="font-bold text-gray-800">「収益改善施策」</span>として推進。
+                </p>
+                <div class="text-xs font-mono text-gray-400 bg-gray-50 inline-block px-2 py-1 rounded">Output: 改善仕様書</div>
+            </div>
+
+            <div class="group">
+                <div class="text-xs font-bold text-gray-300 mb-4 group-hover:text-gray-900 transition-colors">03 / BEHAVIORAL</div>
+                <h3 class="text-xl font-bold mb-3">行動経済学の実装</h3>
+                <p class="text-sm text-gray-600 leading-7 mb-4">
+                    「損失回避（損をしたくない心理）」への訴求や、借入完了の安堵感を狙った「自動返済」への誘導など、ナッジ理論を用いたUIで行動を変容させた。
+                </p>
+                <div class="text-xs font-mono text-gray-400 bg-gray-50 inline-block px-2 py-1 rounded">Output: ポップアップUI</div>
+            </div>
+
+        </div>
+
+        <div class="border-t border-gray-200 pt-6 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <div class="w-2 h-2 accent-bg rounded-full"></div>
+                <span class="text-xs font-bold tracking-widest text-gray-400 uppercase">My Core Value</span>
+            </div>
+            <p class="text-sm font-medium text-gray-600">
+                UXを単なる「使いやすさ」で終わらせず、事業の「収益性（リスク管理）」に直結する設計へ昇華する。
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>

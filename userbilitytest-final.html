@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Design Ops (Minimalist)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #111827;
+        }
+        .slide-canvas {
+            width: 1280px;
+            height: 720px;
+            background-color: #ffffff;
+            position: relative;
+            padding: 80px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        /* Minimalist Accent: Burnt Orange */
+        .accent-color { color: #c2410c; } 
+        .accent-bg { background-color: #c2410c; }
+        
+        .grid-line {
+            border-top: 1px solid #e5e7eb;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slide-canvas">
+        
+        <div>
+            <div class="flex justify-between items-start mb-6">
+                <div class="text-xs font-bold tracking-[0.2em] text-gray-400 uppercase">Project: Design Ops & QA Process</div>
+                <div class="text-xs font-medium text-gray-400">UX Research / Internal Comms</div>
+            </div>
+
+            <div class="flex justify-between items-end">
+                <h1 class="text-5xl font-bold leading-tight tracking-tight text-gray-900 w-2/3">
+                    「感覚評価」で終わらせない。<br>
+                    UXを<span class="accent-color">エンジニアリング</span>する。
+                </h1>
+                
+                <div class="text-right">
+                    <div class="flex items-baseline justify-end gap-1">
+                        <span class="text-sm font-bold text-gray-400 mr-2">IMPACT</span>
+                        <span class="text-6xl font-bold accent-color tracking-tighter">Min</span>
+                        <span class="text-lg font-medium text-gray-600">Rework Cost</span>
+                    </div>
+                    <p class="text-xs text-gray-400 mt-1">リリース後の修正工数・手戻りを最小化</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-12 w-full mt-12 pt-8 border-t border-gray-200">
+            
+            <div class="group">
+                <div class="text-xs font-bold text-gray-300 mb-4 group-hover:text-gray-900 transition-colors">01 / GAP ANALYSIS</div>
+                <h3 class="text-xl font-bold mb-3">「プロの盲点」を暴く</h3>
+                <p class="text-sm text-gray-600 leading-7 mb-4">
+                    内部レビューでは見抜けない「初心者のつまづき」が離脱の主因。<br>
+                    感覚論ではなく、文献調査に基づいた論理で「なぜテストが必要か」の共通言語を構築。
+                </p>
+                <div class="text-xs font-mono text-gray-400 bg-gray-50 inline-block px-2 py-1 rounded">Output: 社内UXガイドブック</div>
+            </div>
+
+            <div class="group">
+                <div class="text-xs font-bold text-gray-300 mb-4 group-hover:text-gray-900 transition-colors">02 / PROCESS CHANGE</div>
+                <h3 class="text-xl font-bold mb-3">「完了条件」の再定義</h3>
+                <p class="text-sm text-gray-600 leading-7 mb-4">
+                    UXテスト通過をリリースの必須要件化。<br>
+                    「機能はあるが使えない」動画をPMに提示し、ファクトベースで組織の品質意識を変革した。
+                </p>
+                <div class="text-xs font-mono text-gray-400 bg-gray-50 inline-block px-2 py-1 rounded">Output: 新・開発プロセスフロー</div>
+            </div>
+
+            <div class="group">
+                <div class="text-xs font-bold text-gray-300 mb-4 group-hover:text-gray-900 transition-colors">03 / STANDARDIZATION</div>
+                <h3 class="text-xl font-bold mb-3">品質評価のTPI化</h3>
+                <p class="text-sm text-gray-600 leading-7 mb-4">
+                    TPIスコアリングを導入し、UX品質を「感想」から「数値」へ。<br>
+                    リクルーティングや実施フローを型化し、誰でも高品質なテストができる土壌を整備。
+                </p>
+                <div class="text-xs font-mono text-gray-400 bg-gray-50 inline-block px-2 py-1 rounded">Output: TPIスコアシート</div>
+            </div>
+
+        </div>
+
+        <div class="border-t border-gray-200 pt-6 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <div class="w-2 h-2 accent-bg rounded-full"></div>
+                <span class="text-xs font-bold tracking-widest text-gray-400 uppercase">My Core Value</span>
+            </div>
+            <p class="text-sm font-medium text-gray-600">
+                デザインを個人の「センス」から組織の「エンジニアリング」へ昇華。品質を担保し続ける文化を実装する。
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>
